@@ -1,0 +1,10 @@
+.negrito {
+    font-weight: bold;
+}
+#textoPrincipal {
+    font-size: 40px;
+    font-weight: bold;
+    color: azure;
+    padding: 10px;
+    background-color: aquamarine;
+}
