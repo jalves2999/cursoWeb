@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a espera-um-pouco href="https://google.com.br" 
+        >Google</a>
+        <!--onclick="navegarEm5s(event)"-->
+    </div>
+    <script>
+        function navegarEm5s(e){
+            e.preventDefault()
+            window.alert('Saindo em 3s')//mensagem na tela
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href            
+                }, 3000);
+        }
+        //const a = document.querySelector('a')
+        //a.onclick = navegarEm5s//forma melhor
+
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
+    </script>
+</body>

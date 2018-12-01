@@ -1,0 +1,45 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li>
+       <span wm-folder>Backend</span>
+        <ul id="backid">
+            <li>
+                <span wm-folder>App</span>
+                <ul id="appid">
+                    <li>Produto.js</li>
+                    <li>Usuario.js</li>
+                    <li>Vendas.js</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>Config</span>
+                <ul id="confgid">
+                    <li>Banco.js</li>
+                    <li>Rotas.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span wm-folder>frontend</span>
+        <ul id="frontid">
+            <span wm-folder>puclic</span>
+            <li id="publicid">
+                <li>App.css</li>
+                <li>App.js</li>
+                <li>Index.html</li>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[wm-folder').forEach(folder => {
+        folder.onclick = function(e){
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
